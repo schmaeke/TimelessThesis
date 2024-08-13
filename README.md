@@ -21,7 +21,7 @@ In order for the document to properly compile you also have to add the ```-shell
 Here are a few screenshots of the ```pdf``` produced by the example:
 <p align = "center">
 
-    <img src = "screenshots/page_0.jpg" width = "30%"><br>
-    <img src = "screenshots/page_1.jpg" width = "30%"><img src = "screenshots/page_2.jpg" width = "30%"><br>
+<img style = "border: 10px solid red;" src = "screenshots/page_0.jpg" width = "30%"/><br>
+<img src = "screenshots/page_1.jpg" width = "30%"/><img src = "screenshots/page_2.jpg" width = "30%"/><br>
 
 </p>
