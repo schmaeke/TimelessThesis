@@ -1,4 +1,4 @@
-# LaTeX Thesis
+# LᴀTᴇX Thesis
 
 <p align = "center">
     <img src = "screenshots/page_0.jpg" width = "30%"/><br>
