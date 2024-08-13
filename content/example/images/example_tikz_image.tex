@@ -1,0 +1,167 @@
+\begin{tikzpicture}
+
+	% b.c.
+	\draw[black, decorate, decoration = {
+		markings,
+		mark = between positions 0cm and 0.56cm step 0.8mm with {
+			\draw[black] (0, 0) -- (0.1, -0.15);
+		}
+		pre = curveto,
+		post = curveto,
+		transform = {shift only},
+	}]
+	(1.5, 0.5) to[out = 10, in = -90]
+	++(1.5, 2) to[out = 90, in = 0]
+	++(-1, 1) to[out = 180, in = 30]
+	++(-1, -1) to[out = -150, in = 90]
+	++(-1, -1) to[out = -90, in = 190]
+	cycle;
+
+	\draw[black, decorate, decoration = {
+		markings,
+		mark = between positions 4.5cm and 5cm step 1.2mm with {
+			\draw[black, -stealth] (0, 0) -- (-0.2, 0.2);
+		}
+		pre = curveto,
+		post = curveto,
+		transform = {shift only},
+	}]
+	(1.5, 0.5) to[out = 10, in = -90]
+	++(1.5, 2) to[out = 90, in = 0]
+	++(-1, 1) to[out = 180, in = 30]
+	++(-1, -1) to[out = -150, in = 90]
+	++(-1, -1) to[out = -90, in = 190]
+	cycle;
+
+	% org. problem
+	\draw[black, fill = black!20!white]
+	(1.5, 0.5) to[out = 10, in = -90]
+	++(1.5, 2) to[out = 90, in = 0]
+	++(-1, 1) to[out = 180, in = 30]
+	++(-1, -1) to[out = -150, in = 90]
+	++(-1, -1) to[out = -90, in = 190]
+	cycle;
+
+	% fikt. domain
+	\draw[black, fill = black!20!white] (3.75, 0.25) rectangle ++(3.5, 3.5);
+
+	\draw[black, fill = white]
+	(5.5, 0.5) to[out = 10, in = -90]
+	++(1.5, 2) to[out = 90, in = 0]
+	++(-1, 1) to[out = 180, in = 30]
+	++(-1, -1) to[out = -150, in = 90]
+	++(-1, -1) to[out = -90, in = 190]
+	cycle;
+
+	% combind domain
+	\draw[black, fill = black!20!white] (8.25, 0.25) rectangle ++(3.5, 3.5);
+
+	\draw[black, densely dashed]
+	(10, 0.5) to[out = 10, in = -90]
+	++(1.5, 2) to[out = 90, in = 0]
+	++(-1, 1) to[out = 180, in = 30]
+	++(-1, -1) to[out = -150, in = 90]
+	++(-1, -1) to[out = -90, in = 190]
+	cycle;
+
+	% mesh
+	\begin{scope}[shift = {(4.5cm, 0)}]
+
+		\draw[black, densely dashed, fill = black!20!white]
+		(10, 0.5) to[out = 10, in = -90]
+		++(1.5, 2) to[out = 90, in = 0]
+		++(-1, 1) to[out = 180, in = 30]
+		++(-1, -1) to[out = -150, in = 90]
+		++(-1, -1) to[out = -90, in = 190]
+		cycle;
+
+
+		\draw[black] (8.25, 0.25) -- ++(2.8, 0) -- ++(0, 0.7) -- ++(0.7, 0) -- ++(0, 2.8) -- ++(-2.1, 0) -- ++(0, -0.7) -- ++(-0.7, 0) -- ++(0, -0.7) -- ++(-0.7, 0) -- cycle;
+
+		% mesh
+		\draw[black] (8.25, 0.95) -- ++(2.8, 0);
+		\draw[black] (8.25, 1.65) -- ++(3.5, 0);
+		\draw[black] (8.95, 2.35) -- ++(2.8, 0);
+		\draw[black] (9.65, 3.05) -- ++(2.1, 0);
+
+		\draw[black] (8.95, 0.25) -- ++(0, 2.1);
+		\draw[black] (9.65, 0.25) -- ++(0, 2.8);
+		\draw[black] (10.35, 0.25) -- ++(0, 3.5);
+		\draw[black] (11.05, 0.95) -- ++(0, 2.8);
+
+		\foreach \x in {8.25, 8.95, 9.65, 10.35, 11.05}
+			{
+				\foreach \y in {0.25, 0.95, 1.65, 2.35}
+					{
+						\draw[black, fill = white] (\x, \y) circle (0.08);
+					}
+					\draw[black, fill = white] ({\x + 0.7}, 3.05) circle (0.08);
+			}
+
+		\foreach \x in {9.65, 10.35, 11.05, 11.75}
+			{
+				\draw[black, fill = white] (\x, 3.75) circle (0.08);
+			}
+
+		\foreach \y in {0.95, 1.65, 2.35}
+			{
+				\draw[black, fill = white] (11.75, \y) circle (0.08);
+			}
+
+
+		\begin{scope}[shift = {(8.5, 0)}]
+			\draw[black, decorate, decoration = {
+				markings,
+				mark = between positions 0cm and 0.56cm step 0.8mm with {
+					\draw[black] (0, 0) -- (0.1, -0.15);
+				}
+				pre = curveto,
+				post = curveto,
+				transform = {shift only},
+			}]
+			(1.5, 0.5) to[out = 10, in = -90]
+			++(1.5, 2) to[out = 90, in = 0]
+			++(-1, 1) to[out = 180, in = 30]
+			++(-1, -1) to[out = -150, in = 90]
+			++(-1, -1) to[out = -90, in = 190]
+			cycle;
+
+			\draw[black, decorate, decoration = {
+				markings,
+				mark = between positions 4.5cm and 5cm step 1.2mm with {
+					\draw[black, -stealth] (0, 0) -- (-0.2, 0.2);
+				}
+				pre = curveto,
+				post = curveto,
+				transform = {shift only},
+			}]
+			(1.5, 0.5) to[out = 10, in = -90]
+			++(1.5, 2) to[out = 90, in = 0]
+			++(-1, 1) to[out = 180, in = 30]
+			++(-1, -1) to[out = -150, in = 90]
+			++(-1, -1) to[out = -90, in = 190]
+			cycle;
+		\end{scope}
+	\end{scope}
+
+	% cup and equal sign
+	\node[] at (3.4, 2) {$\boldsymbol{\bigcup}$};
+	\node[] at (7.75, 2) {$\boldsymbol{=}$};
+	\node[] at (12.25, 2) {$\boldsymbol{\to}$};
+
+	% domains
+	\node[] at (1.5, 1.5) {$\Omega_\text{phy}$};
+	\node[below right] at (3.8, 3.7) {$\Omega_\text{fict}$};
+	\node[above right] at (8.3, 0.3) {$\Omega_\cup$};
+
+	\node[] at (10, 1.5) {$\alpha = 1$};
+	\node[below right] at (8.3, 3.7) {$\alpha \approx 0$};
+
+	% b.c.
+	\node[] at (1.2, 3.7) {$\boldsymbol{t}_0$};
+	\node[] at (1.05, 3.05) {$\Gamma_N$};
+
+	\node[] at (2.1, 0.2) {$\boldsymbol{u}_0$};
+	\node[] at (2.6, 0.7) {$\Gamma_D$};
+
+\end{tikzpicture}

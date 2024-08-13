@@ -1,0 +1,47 @@
+\begin{tikzpicture}[spy using outlines={black, line width = 1, densely dashed, thick, rectangle, size=2cm, magnification=2, connect spies}]
+
+	\begin{axis} [
+		font={\footnotesize},
+		axis lines = box,
+		xlabel = $x$,
+		ylabel = $y$,
+		width = 0.75\textwidth,
+		height = 8cm,
+		max space between ticks = 40,
+		grid = major,
+		grid style = {densely dashed, line width = 0.1pt},
+		minor x tick num = 9,
+		minor y tick num = 9,
+		cycle list name = plotColorListMark,
+		legend pos = north east,
+		legend cell align={left},
+		domain = -10:10,
+		smooth,
+	]
+
+		\addplot { -1.0 * atan( 1.0 * x ) };
+		\addplot { -1.1 * atan( 1.1 * x ) };
+		\addplot { -1.2 * atan( 1.2 * x ) };
+		\addplot { -1.3 * atan( 1.3 * x ) };
+		\addplot { -1.4 * atan( 1.4 * x ) };
+		\addplot { -1.5 * atan( 1.5 * x ) };
+		\addplot { -1.6 * atan( 1.6 * x ) };
+		\addplot { -1.7 * atan( 1.7 * x ) };
+		\addplot { -1.8 * atan( 1.8 * x ) };
+
+		\legend{
+			$\alpha = 1.0$,
+			$\alpha = 1.1$,
+			$\alpha = 1.3$,
+			$\alpha = 1.4$,
+			$\alpha = 1.5$,
+			$\alpha = 1.6$,
+			$\alpha = 1.7$,
+			$\alpha = 1.8$,
+		};
+
+	\end{axis}
+
+	\spy[height = 2.5cm, width = 2.5cm] on (2.5, 5.2) in node[fill = white] at (1.5, 1.5);
+
+\end{tikzpicture}

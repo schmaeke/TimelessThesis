@@ -1,0 +1,55 @@
+% Loading the document class ------------------------------------------------- %
+\documentclass{thesis}
+
+
+% Set general document information ------------------------------------------- %
+\title{Here Goes the Long and Fancy Title of this Elaborate Thesis About Important Stuff}
+\author{Jason Miller}
+\date{\today}
+
+\universityName{Hochschule Düsseldorf - University of Applied Sciences}
+\universityLogo{resources/hsd_mv_logo.pdf}
+\universityLogoWidth{14cm}
+\studyProgram{Mechanical Engineering}
+\desiredDegree{Master of Science}
+
+\firstExaminor{Prof. Dr. rer. nat. Timmy Brown}{Computational Mechanics}
+\secondExaminor{Prof. Dr.-Ing. John Goodman}{High Performance Computing}
+
+
+% Loading additional packages ------------------------------------------------ %
+\usepackage[english]{babel} % use 'ngerman' instead of 'english' for german
+\usepackage{blindtext}
+
+
+\begin{document} % Start of the acutal document ------------------------------ %
+
+	\pagenumbering{Roman} % Set roman page numbering
+	\maketitle % Create the title page
+	\cleardoublepage % Clear next uble page
+
+	\input{content/abstract/main.tex}
+	\cleardoublepage % Clear next double page
+
+	\tableofcontents % Create table of contents
+	\cleardoublepage % Clear next double page
+
+	\pagenumbering{arabic} % Set arabic page numbering
+
+	\input{content/introduction/main.tex}
+	\input{content/example/main.tex}
+	\input{content/conclusion/main.tex}
+
+	\cleardoublepage % Clear next double page
+	\pagenumbering{Roman} % Set roman page numbering
+
+	\bibliography{references/references.bib}
+
+	\listoffigures % Crate list of figures
+	\cleardoublepage % Clear next double page
+	\listoftables % Create list of tables
+	\cleardoublepage % Clear next double page
+
+	\input{content/declaration_of_academic_integrity.tex}
+
+\end{document} % End of the document ----------------------------------------- %

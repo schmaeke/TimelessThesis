@@ -1,0 +1,60 @@
+\chapter{Example Chapter}
+\blindtext[3]
+
+\section{First subsection}
+\blindtext[4]
+\begin{equation}
+	\begin{aligned}
+		\int \limits_\Omega \bs{\varepsilon}(\delta\bs{u}) : \bs{C} : \bs{\varepsilon}(\bs{u})\intd{\Omega}
+		&= \int \limits_\Omega \delta\bs{u} \bs{p}\intd{\Omega}
+		 + \int \limits_{\Gamma_N} \delta\bs{u} \bs{q}\intd{\partial\Omega}
+		 + \int \limits_{\Gamma_D} \delta\bs{u} \bs{q}\intd{\partial\Omega} \\
+		\land \quad \bs{u} &= \overline{\bs{u}} \quad \forall \bs{x} \in \Gamma_D \\
+	\end{aligned}
+\end{equation}
+\blindtext[2]
+\begin{figure}
+	\begin{center}
+		\input{content/example/images/example_tikz_image.tex}
+		\caption{This is an example image. The visualization has been done using the \texttt{TikZ} package.}
+		\label{fig:example_tikz_image}
+	\end{center}
+\end{figure}
+\subsection{First subsection}
+\Cref{fig:example_tikz_image} \blindtext[3]
+\subsubsection{First subsubsection}
+\blindtext[3]
+\subsubsection{Second subsubsection}
+\blindtext[3]
+\subsection{Second subsection}
+\blindtext[4]
+\begin{figure}
+	\begin{center}
+		\input{content/example/images/example_plot.tex}
+		\caption{This is an example plot. The visualization has been done using the \texttt{pgfplots} package.}
+		\label{fig:example_tikz_image}
+	\end{center}
+\end{figure}
+\cite{bathe2007finite} \blindtext[5]
+
+\begin{notebox}{Example of 'notebox'}
+	\blindtext
+\end{notebox}
+
+\begin{importantbox}{Example of 'importantbox'}
+	\blindtext
+\end{importantbox}
+
+\begin{alertbox}{Example of 'alertbox'}
+	\blindtext
+\end{alertbox}
+
+\begin{lstlisting}[caption = {Example of 'lstlisting' with Julia code}, label = {code:example}, float]
+function unit_bounding_box( dimension::Int64 )
+	return BoundingBox(
+		dimension, zeros( dimension ), 2.0 .* ones( dimension )
+	)
+end # function
+\end{lstlisting}
+
+\todo{Example of a 'TODO'. These can be placed during writing to add comments on open tasks.}

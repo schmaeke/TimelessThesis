@@ -20,8 +20,29 @@ In order for the document to properly compile you also have to add the ```-shell
 
 Here are a few screenshots of the ```pdf``` produced by the example:
 <p align = "center">
-
-<img style = "border: 10px solid red;" src = "screenshots/page_0.jpg" width = "30%"/><br>
-<img src = "screenshots/page_1.jpg" width = "30%"/><img src = "screenshots/page_2.jpg" width = "30%"/><br>
-
+    <img src = "screenshots/page_0.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_1.jpg" width = "30%"/> <img src = "screenshots/page_2.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_3.jpg" width = "30%"/> <img src = "screenshots/page_4.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_5.jpg" width = "30%"/> <img src = "screenshots/page_6.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_7.jpg" width = "30%"/> <img src = "screenshots/page_8.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_9.jpg" width = "30%"/> <img src = "screenshots/page_10.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_11.jpg" width = "30%"/> <img src = "screenshots/page_12.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_13.jpg" width = "30%"/> <img src = "screenshots/page_14.jpg" width = "30%"/><br>
+</p>
+<p align = "center">
+    <img src = "screenshots/page_15.jpg" width = "30%"/> <img src = "screenshots/page_16.jpg" width = "30%"/><br>
 </p>
