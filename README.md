@@ -1,4 +1,4 @@
-# LᴀTᴇX Thesis
+# L<sup>A</sup>T<sub>E</sub>X Thesis
 
 <p align = "center">
     <img src = "screenshots/page_0.jpg" width = "30%"/><br>
