@@ -4,15 +4,15 @@
     <img src = "screenshots/page_0.jpg" width = "30%"/><br>
 </p>
 
-This repository provides a document class ```thesis.cls``` alongside an example ```master.tex``` for typesetting a academic thesis in LaTeX.
-The provided example is made for students at the *Hochschule Düsseldorf*. Nevertheless, changing the university logo and name is pretty straight forward.
+This repository provides a document class ```thesis.cls``` alongside an example ```master.tex``` for typesetting a academic thesis in L<sup>A</sup>T<sub>E</sub>X.
+The provided example is made for students at the [*Hochschule Düsseldorf*](https://www.hs-duesseldorf.de/). Nevertheless, changing the university logo and name is pretty straight forward.
 
 ## Building the document
-Building the document is easy, first you need a ```LaTeX``` installation, on macOS this can be done using ```homebrew```
+Building the document is easy, first you need a ```tex``` installation, on macOS this can be done using [```homebrew```](https://brew.sh)
 ```sh
 brew install texlive
 ```
-This also comes with ```latexmk``` which lets us build the document with
+This also comes with [```latexmk```](https://www.cantab.net/users/johncollins/latexmk/) which lets us build the document with
 ```sh
 latexmk -pdf
 ```
