@@ -1,4 +1,4 @@
-\begin{tikzpicture}[spy using outlines={black, line width = 1, densely dashed, thick, rectangle, size=2cm, magnification=2, connect spies}]
+\begin{tikzpicture}[spy using outlines={black, line width = 1, densely dashed, thick, rectangle, size=2cm, magnification=1.6, connect spies}]
 
 	\begin{axis} [
 		font={\footnotesize},
@@ -12,12 +12,12 @@
 		grid style = {densely dashed, line width = 0.1pt},
 		minor x tick num = 9,
 		minor y tick num = 9,
-		cycle list name = plotColorListMark,
+		cycle list name = juliaColorList,
 		legend pos = north east,
 		legend cell align={left},
 		domain = -10:10,
 		smooth,
-	]
+	] 
 
 		\addplot { -1.0 * atan( 1.0 * x ) };
 		\addplot { -1.1 * atan( 1.1 * x ) };

@@ -81,84 +81,66 @@
 
 
 % COLORS - - - - - - - - - - - - - - - - - - - - - - - - - -
-% tab20 colors (https://matplotlib.org/stable/tutorials/colors/colormaps.html)
-\definecolor{blue}{RGB}{58, 116, 180}
-\definecolor{lightblue}{RGB}{179, 198, 232}
 
-\definecolor{orange}{RGB}{241, 135, 25}
-\definecolor{lightorange}{RGB}{246, 191, 121}
-
-\definecolor{green}{RGB}{75, 158, 40}
-\definecolor{lightgreen}{RGB}{164, 221, 136}
-
-\definecolor{red}{RGB}{199, 61, 45}
-\definecolor{lightred}{RGB}{243, 158, 152}
-
-\definecolor{purple}{RGB}{144, 105, 190}
-\definecolor{lightpurple}{RGB}{194, 177, 214}
-
-\definecolor{brown}{RGB}{133, 89, 76}
-\definecolor{lightbrown}{RGB}{191, 158, 149}
-
-\definecolor{pink}{RGB}{216, 126, 195}
-\definecolor{lightpink}{RGB}{239, 185, 211}
-
-\definecolor{gray}{RGB}{127, 127, 127}
-\definecolor{lightgray}{RGB}{199, 199, 199}
-
-\definecolor{yellow}{RGB}{187, 190, 32}
-\definecolor{lightyellow}{RGB}{218, 220, 140}
-
-\definecolor{cyan}{RGB}{83, 187, 206}
-\definecolor{lightcyan}{RGB}{169, 216, 228}
-
+% Julia colors http://juliagraphics.github.io/Colors.jl/stable/namedcolors/#Julia-logo-colors (except the orange one)
+\definecolor{red}{HTML}{cb3c33}
+\definecolor{green}{HTML}{389826}
+\definecolor{blue}{HTML}{4063d8}
+\definecolor{purple}{HTML}{9558b2}
+\definecolor{orange}{rgb}{1.0, 0.5, 0.0}
 
 
 % PGFPLOTS color lists
-\pgfplotscreateplotcyclelist{plotColorList}{
-	blue \\
-	orange \\
-	green \\
+\pgfplotscreateplotcyclelist{juliaColorList}{
 	red \\
+	green \\
+	blue \\
 	purple \\
-	brown \\
-	pink \\
-	gray \\
-	yellow \\
-	cyan \\
-	lightblue \\
-	lightorange \\
-	lightgreen \\
-	lightred \\
-	lightpurple \\
-	lightbrown \\
-	lightpink \\
-	lightgray \\
-	lightyellow \\
-	lightcyan \\
+	orange \\
+%
+	red,    densely dashed \\
+	green,  densely dashed \\
+	blue,   densely dashed \\
+	purple, densely dashed \\
+	orange, densely dashed \\
+%
+	red,    densely dotted \\
+	green,  densely dotted \\
+	blue,   densely dotted \\
+	purple, densely dotted \\
+	orange, densely dotted \\
+%
+	red,    densely dash dot \\
+	green,  densely dash dot \\
+	blue,   densely dash dot \\
+	purple, densely dash dot \\
+	orange, densely dash dot \\
 }
 
-\pgfplotscreateplotcyclelist{plotColorListMark}{
-	blue,        mark = square*, mark size = 1.0pt, mark options = {fill = blue!50!white, solid} \\
-	orange,      mark = *, mark size = 1.0pt, mark options = {fill = orange!50!white, solid} \\
-	green,       mark = triangle*, mark size = 1.0pt, mark options = {fill = green!50!white, solid} \\
-	red,         mark = diamond*, mark size = 1.0pt, mark options = {fill = red!50!white, solid} \\
-	purple,      mark = pentagon*, mark size = 1.0pt, mark options = {fill = purple!50!white, solid} \\
-	brown,       mark = square*, mark size = 1.0pt, mark options = {fill = brown!50!white, solid} \\
-	pink,        mark = *, mark size = 1.0pt, mark options = {fill = pink!50!white, solid} \\
-	gray,        mark = triangle*, mark size = 1.0pt, mark options = {fill = gray!50!white, solid} \\
-	yellow,      mark = diamond*, mark size = 1.0pt, mark options = {fill = yellow!50!white, solid} \\
-	cyan,        mark = pentagon*, mark size = 1.0pt, mark options = {fill = cyan!50!white, solid} \\
-	lightblue,   mark = square*, mark size = 1.0pt, mark options = {fill = lightblue!50!white, solid} \\
-	lightorange, mark = *, mark size = 1.0pt, mark options = {fill = lightorange!50!white, solid} \\
-	lightgreen,  mark = triangle*, mark size = 1.0pt, mark options = {fill = lightgreen!50!white, solid} \\
-	lightred,    mark = diamond*, mark size = 1.0pt, mark options = {fill = lightred!50!white, solid} \\
-	lightpurple, mark = pentagon*, mark size = 1.0pt, mark options = {fill = lightpurple!50!white, solid} \\
-	lightbrown,  mark = square*, mark size = 1.0pt, mark options = {fill = lightbrown!50!white, solid} \\
-	lightpink,   mark = *, mark size = 1.0pt, mark options = {fill = lightpink!50!white, solid} \\
-	lightgray,   mark = triangle*, mark size = 1.0pt, mark options = {fill = lightgray!50!white, solid} \\
-	lightyellow, mark = diamond*, mark size = 1.0pt, mark options = {fill = lightyellow!50!white, solid} \\
-	lightcyan,   mark = pentagon*, mark size = 1.0pt, mark options = {fill = lightcyan!50!white, solid} \\
+\pgfplotscreateplotcyclelist{juliaColorListMark}{
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid} \\
+	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid} \\
+	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid} \\
+	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid} \\
+	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid} \\
+%
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dashed \\
+	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dashed \\
+	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dashed \\
+	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dashed \\
+	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dashed \\
+%
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dotted \\
+	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dotted \\
+	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dotted \\
+	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dotted \\
+	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dotted \\
+%
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dash dot \\
+	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dash dot \\
+	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dash dot \\
+	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dash dot \\
+	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dash dot \\
 }
 
 % colormap for surface plots
