@@ -18,5 +18,5 @@ latexmk -pdf
 ```
 This will automatically compile every file with a ```.tex``` ending in the current directory.
 If you have a lot of ```TikZ``` graphics in you thesis, resulting in long compile times, you should enable the externalize feature from tikz.
-Just create an empty directory ```figures``` next to you ```master.tex``` and add ```\tikzexternalize[prefix = figures/]``` to your preamble.
+Just create an empty directory ```figures``` next to your ```master.tex``` and add ```\tikzexternalize[prefix = figures/]``` to your preamble.
 Following that, you also have to add the ```-shell-escape``` flag to ```latexmk``` in order for the document to properly compile.
