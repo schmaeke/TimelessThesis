@@ -20,10 +20,11 @@
 % PACKAGES - - - - - - - - - - - - - - - - - - - - - - - - -
 
 % Page geometry
-\RequirePackage[inner  = 2.25cm,
-                outer  = 1.50cm,
-								top    = 2.50cm,
-								bottom = 3.00cm]{geometry}
+\RequirePackage[inner    = 2.25cm,
+                outer    = 1.50cm,
+								top      = 2.50cm,
+								bottom   = 4.00cm,
+								footskip = 2.0cm]{geometry}
 
 % Document fonts
 \RequirePackage{paratype}
@@ -33,7 +34,7 @@
 \RequirePackage[T1]{fontenc}
 
 % Math symbols and formatting
-\RequirePackage[fleqn]{amsmath}
+\RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{amsfonts}
 \RequirePackage{xfrac}
@@ -42,7 +43,7 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[parfill]{parskip}
 \RequirePackage{caption}
-\RequirePackage{titlesec}
+\RequirePackage[explicit]{titlesec}
 \RequirePackage{xcolor}
 \RequirePackage{setspace}
 \RequirePackage{microtype}
@@ -78,69 +79,126 @@
 
 % Misc.
 \RequirePackage{afterpage}
+\RequirePackage{fontawesome5}
+\RequirePackage{fmtcount}
 
 
 % COLORS - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-% Julia colors http://juliagraphics.github.io/Colors.jl/stable/namedcolors/#Julia-logo-colors (except the orange one)
-\definecolor{red}{HTML}{cb3c33}
-\definecolor{green}{HTML}{389826}
-\definecolor{blue}{HTML}{4063d8}
-\definecolor{purple}{HTML}{9558b2}
-\definecolor{orange}{rgb}{1.0, 0.5, 0.0}
+% From velura.nvim - https://github.com/schmaeke/velura.nvim
+\definecolor{red0}{HTML}{7F172B}
+\definecolor{red1}{HTML}{A11E35}
+\definecolor{red2}{HTML}{C5233F}
+\definecolor{red3}{HTML}{DC2C48}
+\definecolor{red4}{HTML}{E94C66}
+\definecolor{red5}{HTML}{EE738D}
+\definecolor{red6}{HTML}{F4A1AB}
+\colorlet{red}{red1}
 
+\definecolor{yellow0}{HTML}{8F7422}
+\definecolor{yellow1}{HTML}{B3962B}
+\definecolor{yellow2}{HTML}{E2BB36}
+\definecolor{yellow3}{HTML}{E9C946}
+\definecolor{yellow4}{HTML}{F3D870}
+\definecolor{yellow5}{HTML}{F5DF8E}
+\definecolor{yellow6}{HTML}{F8E1A8}
+\colorlet{yellow}{yellow1}
+
+\definecolor{green0}{HTML}{1A6C2E}
+\definecolor{green1}{HTML}{22863A}
+\definecolor{green2}{HTML}{29A245}
+\definecolor{green3}{HTML}{33B34E}
+\definecolor{green4}{HTML}{42CC60}
+\definecolor{green5}{HTML}{75D28D}
+\definecolor{green6}{HTML}{A8D8B0}
+\colorlet{green}{green1}
+
+\definecolor{cyan0}{HTML}{356A63}
+\definecolor{cyan1}{HTML}{478B80}
+\definecolor{cyan2}{HTML}{58AA9A}
+\definecolor{cyan3}{HTML}{66B8A7}
+\definecolor{cyan4}{HTML}{80C9BC}
+\definecolor{cyan5}{HTML}{99D5CE}
+\definecolor{cyan6}{HTML}{B3E3E0}
+\colorlet{cyan}{cyan1}
+
+\definecolor{blue0}{HTML}{1A5A91}
+\definecolor{blue1}{HTML}{2272B3}
+\definecolor{blue2}{HTML}{2A8AD9}
+\definecolor{blue3}{HTML}{3C9BE1}
+\definecolor{blue4}{HTML}{5FB2F0}
+\definecolor{blue5}{HTML}{84C0F2}
+\definecolor{blue6}{HTML}{A8D1F4}
+\colorlet{blue}{blue1}
+
+\definecolor{purple0}{HTML}{641F8A}
+\definecolor{purple1}{HTML}{812FB4}
+\definecolor{purple2}{HTML}{9D3BD6}
+\definecolor{purple3}{HTML}{A948E0}
+\definecolor{purple4}{HTML}{BB6EF1}
+\definecolor{purple5}{HTML}{D098F5}
+\definecolor{purple6}{HTML}{E0B3E8}
+\colorlet{purple}{purple1}
 
 % PGFPLOTS color lists
-\pgfplotscreateplotcyclelist{juliaColorList}{
+\pgfplotscreateplotcyclelist{veluraColorList}{
 	red \\
+	yellow \\
 	green \\
+	cyan \\
 	blue \\
 	purple \\
-	orange \\
 %
-	red,    densely dashed \\
-	green,  densely dashed \\
-	blue,   densely dashed \\
+	red, densely dashed \\
+	yellow, densely dashed \\
+	green, densely dashed \\
+	cyan, densely dashed \\
+	blue, densely dashed \\
 	purple, densely dashed \\
-	orange, densely dashed \\
 %
 	red,    densely dotted \\
-	green,  densely dotted \\
-	blue,   densely dotted \\
+	yellow,  densely dotted \\
+	green,   densely dotted \\
+	cyan, densely dotted \\
+	blue, densely dotted \\
 	purple, densely dotted \\
-	orange, densely dotted \\
 %
 	red,    densely dash dot \\
-	green,  densely dash dot \\
-	blue,   densely dash dot \\
+	yellow,  densely dash dot \\
+	green,   densely dash dot \\
+	cyan, densely dash dot \\
+	blue, densely dash dot \\
 	purple, densely dash dot \\
-	orange, densely dash dot \\
 }
 
-\pgfplotscreateplotcyclelist{juliaColorListMark}{
-	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid} \\
-	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid} \\
-	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid} \\
-	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid} \\
-	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid} \\
+\pgfplotscreateplotcyclelist{veluraColorListMark}{
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = red!50!white, solid} \\
+	yellow,  mark = *,         mark size = 1.0pt, mark options = {fill = yellow!50!white, solid} \\
+	green,   mark = triangle*, mark size = 1.0pt, mark options = {fill = green!50!white, solid} \\
+	cyan, mark = diamond*,  mark size = 1.0pt, mark options = {fill = cyan!50!white, solid} \\
+	blue, mark = pentagon*, mark size = 1.0pt, mark options = {fill = blue!50!white, solid} \\
+	purple, mark = oplus*, mark size = 1.0pt, mark options = {fill = purple!50!white, solid} \\
 %
-	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dashed \\
-	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dashed \\
-	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dashed \\
-	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dashed \\
-	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dashed \\
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = red!50!white, solid}, densely dashed \\
+	yellow,  mark = *,         mark size = 1.0pt, mark options = {fill = yellow!50!white, solid}, densely dashed \\
+	green,   mark = triangle*, mark size = 1.0pt, mark options = {fill = green!50!white, solid}, densely dashed \\
+	cyan, mark = diamond*,  mark size = 1.0pt, mark options = {fill = cyan!50!white, solid}, densely dashed \\
+	blue, mark = pentagon*, mark size = 1.0pt, mark options = {fill = blue!50!white, solid}, densely dashed \\
+	purple, mark = oplus*, mark size = 1.0pt, mark options = {fill = purple!50!white, solid}, densely dashed \\
 %
-	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dotted \\
-	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dotted \\
-	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dotted \\
-	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dotted \\
-	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dotted \\
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = red!50!white, solid}, densely dotted \\
+	yellow,  mark = *,         mark size = 1.0pt, mark options = {fill = yellow!50!white, solid}, densely dotted \\
+	green,   mark = triangle*, mark size = 1.0pt, mark options = {fill = green!50!white, solid}, densely dotted \\
+	cyan, mark = diamond*,  mark size = 1.0pt, mark options = {fill = cyan!50!white, solid}, densely dotted \\
+	blue, mark = pentagon*, mark size = 1.0pt, mark options = {fill = blue!50!white, solid}, densely dotted \\
+	purple, mark = oplus*, mark size = 1.0pt, mark options = {fill = purple!50!white, solid}, densely dotted \\
 %
-	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = juliaRed!50!white, solid},    densely dash dot \\
-	green,  mark = *,         mark size = 1.0pt, mark options = {fill = juliaGreen!50!white, solid},  densely dash dot \\
-	blue,   mark = triangle*, mark size = 1.0pt, mark options = {fill = juliaBlue!50!white, solid},   densely dash dot \\
-	purple, mark = diamond*,  mark size = 1.0pt, mark options = {fill = juliaPurple!50!white, solid}, densely dash dot \\
-	orange, mark = pentagon*, mark size = 1.0pt, mark options = {fill = juliaOrange!50!white, solid}, densely dash dot \\
+	red,    mark = square*,   mark size = 1.0pt, mark options = {fill = red!50!white, solid}, densely dash dot \\
+	yellow,  mark = *,         mark size = 1.0pt, mark options = {fill = yellow!50!white, solid}, densely dash dot \\
+	green,   mark = triangle*, mark size = 1.0pt, mark options = {fill = green!50!white, solid}, densely dash dot \\
+	cyan, mark = diamond*,  mark size = 1.0pt, mark options = {fill = cyan!50!white, solid}, densely dash dot \\
+	blue, mark = pentagon*, mark size = 1.0pt, mark options = {fill = blue!50!white, solid}, densely dash dot \\
+	purple, mark = oplus*, mark size = 1.0pt, mark options = {fill = purple!50!white, solid}, densely dash dot \\
 }
 
 % colormap for surface plots
@@ -159,7 +217,7 @@
 % HYPERREF SETUP - - - - - - - - - - - - - - - - - - - - - -
 \hypersetup{
 	colorlinks = true,
-	allcolors = blue,
+	allcolors = black,
 }
 
 
@@ -208,24 +266,28 @@
 
 % HEADER & FOOTER - - - - - - - - - - - - - - - - - - - - -
 
-\setlength{\headheight}{13.6pt}
-\renewcommand{\headrulewidth}{0.0mm}
+\setlength{\headheight}{14.5pt}
+
+\renewcommand{\headrulewidth}{0.15mm}
 \renewcommand{\footrulewidth}{0.0mm}
 
-\fancyhead[OR]{\sffamily\small\nouppercase\rightmark}
-\fancyhead[EL]{\sffamily\small\nouppercase\leftmark}
-\fancyhead[ER, OL, C]{}
+\fancyhead[OL]{\sffamily\itshape\nouppercase\rightmark}
+\fancyhead[ER]{\sffamily\itshape\nouppercase\leftmark}
+\fancyhead[OR, EL]{\sffamily\itshape\thepage}
 
-\fancyfoot[OR, EL]{\sffamily\small\thepage}
+\fancyhead[C]{}
+
+\fancyfoot[OR, EL]{}
 \fancyfoot[ER, OL, C]{}
 
 \fancypagestyle{plain}
 {
-	\fancyhead[OR]{\sffamily\small\nouppercase\rightmark}
-	\fancyhead[EL]{\sffamily\small\nouppercase\leftmark}
-	\fancyhead[ER, OL, C]{}
+	\fancyhead[OL]{\sffamily\itshape\nouppercase\rightmark}
+	\fancyhead[ER]{\sffamily\itshape\nouppercase\leftmark}
+	\fancyhead[OR, EL]{\sffamily\itshape\thepage}
+	\fancyhead[C]{}
 
-	\fancyfoot[OR, EL]{\sffamily\small\thepage}
+	\fancyfoot[OR, EL]{}
 	\fancyfoot[ER, OL, C]{}
 }
 
@@ -237,31 +299,32 @@
 {}
 {}
 {0.0cm}
-{\sffamily\Huge\bfseries}
+{\sffamily\Huge\bfseries#1}
 []
 
+\newcommand*\chapterlabel{}
 \titleformat{name = \chapter}[display]
 {}
 {}
-{0.0cm}
-{\sffamily\Huge\bfseries\chaptername\enspace\thechapter\newline\LARGE}
+{-0.5cm}
+{\sffamily{\bfseries\fontsize{32pt}{32pt}\selectfont\chaptername\enspace\thechapter}\\[0mm]\Huge#1}
 []
 
-\titlespacing{\chapter}{0cm}{0.0cm}{0.25cm}
+\titlespacing{\chapter}{0cm}{0.0cm}{0cm}
 
 
 \titleformat{name = \section, numberless}[display]
 {}
 {}
 {0.0cm}
-{\sffamily\Large\bfseries}
+{\sffamily\Large\bfseries#1}
 []
 
 \titleformat{name = \section}[display]
 {}
 {}
 {0.0cm}
-{\sffamily\Large\bfseries\thesection\enspace\enspace}
+{\sffamily\Large\thesection\ ---\ \bfseries#1}
 []
 
 \titlespacing{\section}{0cm}{0.0cm}{0.25cm}
@@ -271,14 +334,14 @@
 {}
 {}
 {0.0cm}
-{\sffamily\large\bfseries}
+{\sffamily\large\bfseries#1}
 []
 
 \titleformat{name = \subsection}[display]
 {}
 {}
 {0.0cm}
-{\sffamily\large\bfseries\thesubsection\enspace\enspace}
+{\sffamily\large\thesubsection\ ---\ \bfseries#1}
 []
 
 \titlespacing{\subsection}{0cm}{0.0cm}{0.25cm}
@@ -288,14 +351,14 @@
 {}
 {}
 {0.0cm}
-{\sffamily\itshape}
+{\sffamily\itshape#1}
 []
 
 \titleformat{name = \subsubsection}[display]
 {}
 {}
 {0.0cm}
-{\sffamily\textbf{\thesubsubsection}\itshape\enspace\enspace}
+{\sffamily\thesubsubsection\itshape\ ---\ #1}
 []
 
 \titlespacing{\subsubsection}{0cm}{0.0cm}{0.15cm}
@@ -345,7 +408,7 @@
 
 % CAPTIONS - - - - - - - - - - - - - - - - - - - - - - - - -
 \captionsetup{
-  labelfont = {sf, bf, small},
+	labelfont = {sf, bf, small},
   font = {small},
   format = hang,
   justification = justified
@@ -388,9 +451,9 @@
 	numbersep = 2mm,
 	numberstyle = {\color{gray}\ttfamily\scriptsize},
 	xleftmargin = 1.8em,
-	keywordstyle = {\color{blue}},
+	keywordstyle = {\color{purple0}},
 	commentstyle = {\color{gray}\slshape},
-	stringstyle = {\color{green}},
+	stringstyle = {\color{green0}},
 	breaklines = true,
 	breakatwhitespace	= true,
 	tabsize = 2,
@@ -405,56 +468,9 @@
 
 \newcommand{\indRule}{\color{lightgray}\vrule}
 
-% COLOR BOXES - - - - - - - - - - - - - - - - - - - - - - -
-\newtcolorbox{notebox}[1]{%
-	colframe = blue,
-	colback = blue!10!white,
-	coltitle = blue,
-	title = {#1:},
-	before upper = {{\sffamily\bfseries\tcbtitle}\enspace},
-	detach title,
-	boxrule = 0.25mm,
-	leftrule = 1.5mm,
-	arc = 0mm,
-	top = 0.75mm,
-	right = 0.75mm,
-	bottom = 0.75mm,
-	left = 0.75mm,
-}
-
-\newtcolorbox{importantbox}[1]{%
-	colframe = orange,
-	colback = orange!10!white,
-	coltitle = orange,
-	title = {#1:},
-	before upper = {{\sffamily\bfseries\tcbtitle}\enspace},
-	detach title,
-	boxrule = 0.25mm,
-	leftrule = 1.5mm,
-	arc = 0mm,
-	top = 0.75mm,
-	right = 0.75mm,
-	bottom = 0.75mm,
-	left = 0.75mm,
-}
-
-\newtcolorbox{alertbox}[1]{%
-	colframe = red,
-	colback = red!10!white,
-	coltitle = red,
-	title = {#1:},
-	before upper = {{\sffamily\bfseries\tcbtitle}\enspace},
-	detach title,
-	boxrule = 0.25mm,
-	leftrule = 1.5mm,
-	arc = 0mm,
-	top = 0.75mm,
-	right = 0.75mm,
-	bottom = 0.75mm,
-	left = 0.75mm,
-}
 
 % OTHER SETTINGS - - - - - - - - - - - - - - - - - - - - - -
+\tikzset{external/only named = true}
 \bibliographystyle{apalike}
 \pagestyle{fancy}
-\setstretch{1.1}
+\setstretch{1.3}

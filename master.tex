@@ -34,6 +34,8 @@
 	\tableofcontents % Create table of contents
 	\cleardoublepage % Clear next double page
 
+	\newcounter{LastRomanPage}
+	\setcounter{LastRomanPage}{\arabic{page}}
 	\pagenumbering{arabic} % Set arabic page numbering
 
 	\input{content/introduction/main.tex}
@@ -42,6 +44,7 @@
 
 	\cleardoublepage % Clear next double page
 	\pagenumbering{Roman} % Set roman page numbering
+	\setcounter{page}{\theLastRomanPage}
 
 	\bibliography{references/references.bib}
 

@@ -1,4 +1,4 @@
-\chapter{Example Chapter}
+\chapter{Example Chapter with random title}
 \blindtext[3]
 
 \section{First subsection}
@@ -37,23 +37,9 @@
 \end{figure}
 \cite{bathe2007finite} \blindtext[5]
 
-\begin{notebox}{Example of 'notebox'}
-	\blindtext
-\end{notebox}
-
-\begin{importantbox}{Example of 'importantbox'}
-	\blindtext
-\end{importantbox}
-
-\begin{alertbox}{Example of 'alertbox'}
-	\blindtext
-\end{alertbox}
-
 \begin{lstlisting}[caption = {Example of 'lstlisting' with Julia code}, label = {code:example}, float]
-function unit_bounding_box( dimension::Int64 )
-	return BoundingBox(
-		dimension, zeros( dimension ), 2.0 .* ones( dimension )
-	)
+function some_function( dimension::Int64 )
+	return "Hello World"
 end # function
 \end{lstlisting}
 
