@@ -271,9 +271,9 @@
 \renewcommand{\headrulewidth}{0.15mm}
 \renewcommand{\footrulewidth}{0.0mm}
 
-\fancyhead[OL]{\sffamily\itshape\nouppercase\rightmark}
-\fancyhead[ER]{\sffamily\itshape\nouppercase\leftmark}
-\fancyhead[OR, EL]{\sffamily\itshape\thepage}
+\fancyhead[OL]{\sffamily\nouppercase\rightmark}
+\fancyhead[ER]{\sffamily\nouppercase\leftmark}
+\fancyhead[OR, EL]{\sffamily\thepage}
 
 \fancyhead[C]{}
 
@@ -282,9 +282,9 @@
 
 \fancypagestyle{plain}
 {
-	\fancyhead[OL]{\sffamily\itshape\nouppercase\rightmark}
-	\fancyhead[ER]{\sffamily\itshape\nouppercase\leftmark}
-	\fancyhead[OR, EL]{\sffamily\itshape\thepage}
+	\fancyhead[OL]{\sffamily\nouppercase\rightmark}
+	\fancyhead[ER]{\sffamily\nouppercase\leftmark}
+	\fancyhead[OR, EL]{\sffamily\thepage}
 	\fancyhead[C]{}
 
 	\fancyfoot[OR, EL]{}
