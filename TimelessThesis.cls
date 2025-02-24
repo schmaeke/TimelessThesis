@@ -11,7 +11,7 @@
 \NeedsTeXFormat{LaTeX2e}
 
 % Class definition
-\ProvidesClass{thesis}[Extension of the book document class for thesis]
+\ProvidesClass{TimelessThesis}[Extension of the book document class for thesis]
 
 % Base class
 \LoadClass[a4paper, twoside, 12pt]{book}
