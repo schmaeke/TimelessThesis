@@ -1,7 +1,7 @@
 # L<sup>A</sup>T<sub>E</sub>X Thesis
 
 <p align = "center">
-    <img src = "screenshots/page_0.jpg" width = "30%"/><br>
+    <img src = "screenshots/page_0.png" width = "30%"/><br>
 </p>
 
 This repository provides a document class ```thesis.cls``` alongside an example ```master.tex``` for typesetting a academic thesis in L<sup>A</sup>T<sub>E</sub>X.
