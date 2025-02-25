@@ -82,33 +82,36 @@
 
 
 % COLORS - - - - - - - - - - - - - - - - - - - - - - - - - -
-\definecolor{darkgray}{HTML}{3a3a3a}
-\definecolor{gray}{HTML}{505050}
-\definecolor{lightgray}{HTML}{c2c2c2}
+\definecolor{linkcolor}{HTML}{3388CC}
 
-\definecolor{darkred}{HTML}{c04d4d}
-\definecolor{red}{HTML}{ff7070}
-\definecolor{lightred}{HTML}{ffadad}
+\definecolor{darkgray}{HTML}{8c8c8c}
+\definecolor{gray}{HTML}{707070}
+\definecolor{lightgray}{HTML}{3a3a3a}
 
-\definecolor{darkgreen}{HTML}{8dc47e}
-\definecolor{green}{HTML}{c4f08c}
-\definecolor{lightgreen}{HTML}{e0ffb3}
+\definecolor{darkred}{HTML}{7d0000}
+\definecolor{red}{HTML}{b22222}
+\definecolor{lightred}{HTML}{e06666}
 
-\definecolor{darkyellow}{HTML}{d3b34a}
-\definecolor{yellow}{HTML}{f0e08f}
-\definecolor{lightyellow}{HTML}{f8f4c3}
+\definecolor{darkgreen}{HTML}{2e6e00}
+\definecolor{green}{HTML}{5aaf3d}
+\definecolor{lightgreen}{HTML}{8dd35f}
 
-\definecolor{darkblue}{HTML}{5c8ef0}
-\definecolor{blue}{HTML}{7da6ff}
-\definecolor{lightblue}{HTML}{adc8ff}
+\definecolor{darkyellow}{HTML}{8c6b00}
+\definecolor{yellow}{HTML}{b89c20}
+\definecolor{lightyellow}{HTML}{dac650}
 
-\definecolor{darkmagenta}{HTML}{ad71ac}
-\definecolor{magenta}{HTML}{e7a5e8}
-\definecolor{lightmagenta}{HTML}{f7d0f8}
+\definecolor{darkblue}{HTML}{003f7f}
+\definecolor{blue}{HTML}{2664b8}
+\definecolor{lightblue}{HTML}{5e93e6}
 
-\definecolor{darkcyan}{HTML}{72b2cc}
-\definecolor{cyan}{HTML}{94e2ff}
-\definecolor{lightcyan}{HTML}{c4f0ff}
+\definecolor{darkmagenta}{HTML}{74006b}
+\definecolor{magenta}{HTML}{a52fa5}
+\definecolor{lightmagenta}{HTML}{d275d3}
+
+\definecolor{darkcyan}{HTML}{006b76}
+\definecolor{cyan}{HTML}{1e9bb3}
+\definecolor{lightcyan}{HTML}{5ec7e0}
+
 
 % PGFPLOTS color lists
 \pgfplotscreateplotcyclelist{veluraColorList}{
@@ -187,7 +190,7 @@
 % HYPERREF SETUP - - - - - - - - - - - - - - - - - - - - - -
 \hypersetup{
 	colorlinks = true,
-	allcolors = black,
+	allcolors = linkcolor,
 }
 
 
@@ -383,7 +386,7 @@
 
 % CAPTIONS - - - - - - - - - - - - - - - - - - - - - - - - -
 \captionsetup{
-	labelfont = {sf, bf, small},
+	labelfont = {bf, small},
   font = {small},
   format = hang,
   justification = justified
